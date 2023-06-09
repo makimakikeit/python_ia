@@ -4,7 +4,7 @@ data_list = [
     7, 8, 9
 ]
 print(data_list)
-print(data_list[:5])
+print(data_list[1:])
 
 data_list = [
     [1, 2, 3], # 0
@@ -14,7 +14,7 @@ data_list = [
 print(data_list[1][1]) # 5を取り出す
 
 food = ['apple', 'gapes', 'orange']
-# 上書きができる
+# 指定した場所の、上書き(更新)ができる
 food[1] = 'grape'
 # 追加ができる
 food.append('tomato')

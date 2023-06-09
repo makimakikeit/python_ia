@@ -11,3 +11,4 @@ japanese_to_english = {
 print(japanese_to_english['水'])
 print(japanese_to_english[1])
 print(japanese_to_english[(1,1,1)])
+print(japanese_to_english.get('age', 'ありませんでした'))
