@@ -6,5 +6,5 @@ def message(s=None):
 
 # 'Hello World'は実引数とも呼ぶ
 # 関数呼び出しの際に、引数名=値のように渡すことができる
-message('Hello World')
+message('パワー')
 message()

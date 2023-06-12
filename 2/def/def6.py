@@ -4,7 +4,18 @@
 def plus_g(a):
     print('gの値は' + str(g) + 'です')
     f = a + g
-    return f
+    d = a - g
+    return f, d
 
 g = 1
 print(plus_g(3))
+
+def tax(price):
+    tax = int(price * 0.1)
+    print(tax)
+    result = int(price * 1.1)
+    return result
+a = tax(100)
+b = tax(1980)
+print(a)
+print(b)

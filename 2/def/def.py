@@ -4,3 +4,9 @@ def say_hello():
 
 # 関数の呼び出し
 say_hello()
+
+def say_hello(name):
+    print('Hello World' + name)
+
+# 関数の呼び出し
+say_hello('田中です')

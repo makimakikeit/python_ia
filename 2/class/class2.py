@@ -9,7 +9,7 @@ class Character:
 
 # インスタンスの属性は、基本的にはコンストラクタ__int__で行う
 # 他のメソッドないから、インスタンスの属性を設定することもあります
-# # taro.name = 'ziro' のように外側から設定することは少ないです
+# # taro.name = 'ziro' のように外側から設定することは少ないcぁ
 taro = Character('tarou')
 taro.speak(comment='ハロー')
 

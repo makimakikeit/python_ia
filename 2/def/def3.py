@@ -14,10 +14,12 @@
 def tax(price):
     tax = int(price * 0.1)
     price_including_tax = int(price * 1.1)
-    return price_including_tax, tax
+    paypal_tax = int(price * 5)
+    return price_including_tax,  paypal_tax, tax
 
 # 複数の戻り値がある時、代入も複数の変数を適宜できる
 # a, b, c, d = [110, 10, 1, 2]
-a, b = tax(100)
+a, b, c = tax(100)
 print(a)
 print(b)
+print(c)
