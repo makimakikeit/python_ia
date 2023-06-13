@@ -13,6 +13,7 @@ class Character:
         print(self.age)
         print(self.speed)
 
+
 class Healer(Character):
 
     # __init__も上書きできます
@@ -34,6 +35,7 @@ class Healer(Character):
 
 taro = Healer(name='勇者', power=1)  # インスタンスか
 taro.speak(comment='ハロー')
+
 
 class Magician(Character):
 
