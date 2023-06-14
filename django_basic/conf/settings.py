@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # 定数
 INSTALLED_APPS = [
     'myapp.apps.MyappConfig',  # 追加した
+    'myapp2.apps.Myapp2Config',  # 追加した
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

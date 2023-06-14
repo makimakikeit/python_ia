@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <h2>{{title}}</h2>
+    {{message}}<br>
+    {{ user.name }}
+    {{ user.greed }}
+    <hr>
+    <h2>見出し２</h2>
+    {{number_list}}<br>
+
+    {% for number in number_list %}
+        {{ number }}
+    {% endfor %}
+
+</body>
+</html>
