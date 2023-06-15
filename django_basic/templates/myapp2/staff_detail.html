@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スタッフ情報</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+        <h1>社員詳細ページ</h1>
+        <p>id = pk({{ staff.pk }})</p>
+        <p>ビジネスネーム(object.name):{{ object.name }}</p>
+        <p>見やすく書くなら(staff.name):{{ staff.name }}</p>
+        <p>メールアドレス:{{ object.information.email|default:'未入力'}}</p>
+        <p>入社日：{{ object.information.hire_date|date:'Y/m/d' }}</p>
+        <p>部署:{{ object.department.name }}</p>
+        <p>{{ staff.information.as_desk }}</p>
+        <p>
+            {% if staff.information.at_desk %}
+                出社している
+            {% else %}
+                不在
+            {% endif %}
+        </p>
+        <p>
+            <!-- インスタンス.ManyToManyField名.all -->
+            <h2>借りている本</h2>
+            {% for book in staff.rented_books.all %}
+                {{ book.name }},
+            {% endfor %}
+<!--            別パターン-->
+<!--            {% for book in books %}-->
+<!--                {{ book.name }},-->
+<!--            {% endfor %}-->
+        </p>
+    </div>
+{% endblock %}
+</body>
+</html>

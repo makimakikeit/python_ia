@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>トップページ</title>
+</head>
+<body>
+    <h1>記事一覧</h1>
+    {% for article in article_list %}
+    <div>タイトル：{{ article.title }} / {{ article.created_at }}</div>
+    {%  for tag_name in article.tags.all %}
+        {{ tag.name }}
+    {% endfor %}
+    <div>　本文：{{ article.text }}</div>
+    {% endfor %}
+</body>
+</html>

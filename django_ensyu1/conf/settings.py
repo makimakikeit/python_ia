@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)g=ggsxvp)_0-s=e^m7zd1tqd!wxlfpyd8ged6+rbs&gxr)#as'
+SECRET_KEY = 'django-insecure-a&y2n5xhg24@xgbwh46%o+z!k-w2)5gx@l(q675tjm&md+0p2w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -29,10 +29,9 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-# 定数
+
 INSTALLED_APPS = [
-    'myapp.apps.MyappConfig',  # 追加した
-    'myapp2.apps.Myapp2Config',  # 追加した
+    'blog.apps.BlogConfig',  # 追加した
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -56,7 +55,7 @@ ROOT_URLCONF = 'conf.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'aaaa'],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
