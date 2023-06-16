@@ -2,27 +2,29 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>スタッフ情報</title>
+  <title>詳細ページ</title>
 </head>
-<body>
+{% extends 'base.html' %}
+    {% block content %}
+        <body>
+            <div>
+                <h1>詳細ページ</h1>
+                <p>
+                    タイトル：{{ article.title }} / {{ article.created_at }}
+                    {%  for tag_name in article.tags.all %}
+                    {{ tag.name }}
+                    {% endfor %}
+                </p>
+                <p>{{ article.created_at | date:'Y/m/d H.i.s' }}</p>
+                <p>{{ article.text | linebreaks | urlize }}</p>
+                <p>カテゴリ名：{{ article.category.name }}</p>
+                <p>タグ：
+                    {% for tag in article.tags.all %}
+                    {{ tag.name }},
+                    {% endfor %}
+                </p>
+            </div>
 
-    <div>
-        <h1>詳細ページ</h1>
-        <p>
-            タイトル：{{ article.title }} / {{ article.created_at }}
-            {%  for tag_name in article.tags.all %}
-            {{ tag.name }}
-            {% endfor %}
-        </p>
-        <p>{{ article.created_at | date:'Y/m/d H.i.s' }}</p>
-        <p>{{ article.text | linebreaks | urlize }}</p>
-        <p>カテゴリ名：{{ article.category.name }}</p>
-        <p>タグ：
-            {% for tag in article.tags.all %}
-            {{ tag.name }},
-            {% endfor %}
-        </p>
-    </div>
-
-</body>
+        </body>
+{% endblock %}
 </html>

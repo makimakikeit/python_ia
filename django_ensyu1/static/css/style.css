@@ -1,0 +1,12 @@
+h1, h2, h3, h4, p {
+    color:orchid;
+}
+
+p, div {
+        font-size:20px;
+        color:thistle;
+}
+
+a {
+  text-decoration: none;
+}

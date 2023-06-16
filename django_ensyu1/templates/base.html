@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+  {% load static %}
+  <html lang="ja">
+  <head>
+      <!--   css読み込み   -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <title>ブログ</title>
+  </head>
+  <body>
+       <!-- ここを、他のテンプレートファイルが上書きしていく -->
+       <a href="{% url 'blog:article_list' %}">一覧ページへ</a>
+       <div id="content">
+           {% block content %}{% endblock %}
+       </div>
+  </body>
+  </html>
