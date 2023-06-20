@@ -1,0 +1,16 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <a href="{% url 'blog:article_list' %}">記事一覧</a>
+
+  {% block content %} {% endblock %}
+</body>
+</html>
